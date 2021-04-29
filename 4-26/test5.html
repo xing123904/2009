@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+// var obj={
+//     name:"lisi",
+//     age:"12",
+//     sex:"www"
+// }
+// // 想OBJ中添加一个属性
+// obj.email="lisi@qq.com"
+// console.log(obj)
+// // 删除一个属性
+// delete obj.age
+// console.log(obj)
+// // 对象枚举
+// for(k in obj){
+//     console.log(k,obj[k])
+// }
+
+// 自定义属性
+var obj=[]
+Object.defineProperty(obj,"sex",{
+    value:"MALE",//属性的值
+  configurable:true,//属性是否 可以被删除
+  writable:true,//属性是否可以被修改
+  enumerable:true, //属性是否可枚举 for in
+})
+  console.log(obj)
+  Object.defineProperty(obj,"age",{
+      value:12,
+      enumerable:true,
+      configurable:true
+  })
+
+  obj.email="lisi@qq.com"
+  console.log(obj)
+
+  delete obj.age
+  console.log("11111",obj)
+  for(k in obj){
+      console.log(k)
+  }
+  console.log("<hr>");
+  obj.sex="333"
+  console.log(obj)
+//  检测可以被枚举的属性
+console.log(Object.keys(obj))
+</script>

@@ -1,0 +1,251 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+  <div>
+    <button id="btn">点击</button>
+  </div>
+  <div>
+    <p class="p1">AAAAA</p>
+    <p class="p1">BBBBB</p>
+    <p class="p1">CCCCC</p>
+    <p class="p1">DDDDD</p>
+
+    <span>AAAA</span>
+    <span>VBBB</span>
+    <span>CCCC</span>
+  </div>
+
+
+  <script>
+
+    function $(el){
+      var i = el[0]
+      if(i == "#"){
+          alert("ID选择器")
+        document.getElementById("#btn")
+      }else if(i == "."){
+        alert("class选择器")
+        document.getElementsByClassName(".p1")
+      }else{
+        alert("元素选择器")
+        document.getElementsByTagName("span")
+      }
+    }
+
+
+    $("span")
+
+  </script>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html> -->
+<script>
+// function cl(){
+//     var a="10"
+//     function po(){
+        
+//     }
+//     return a
+// }
+//  var res=cl()
+//  console.log(res)
+
+
+// function outerFunction (){
+//      const outer = `I see the outer variable!`
+//       function innerFunction(){
+//            console.log(outer) 
+//         }
+//          return innerFunction
+//          } 
+//         outerFunction()() 
+        
+// function Person(){
+//     this.age=20;
+// }
+// Person.prototype.age=30;
+// Person.prototype.getAge=function(){
+//     return this.age;
+// };
+//    var p=new Person();
+//    console.log(p.getAge())
+
+// function a(){
+//     var i=0;
+//     function b(){
+//         i++;
+//         console.log(i)
+      
+        
+         
+//     }
+//     return b;
+
+// }
+// var c=a();
+// c()
+// c()
+// c()
+// console.log(c)
+
+// console.log(a)
+
+
+// a='hello'
+// function fn(){
+//     console.log(a)
+//     a=12
+// }
+// fn()
+// console.log(a)
+
+// if(!("a" in window)){
+//     var a=12
+// }
+// console.log(a)
+
+// var add=(function(){
+//     return function(){
+//         var counter=0;
+//         return (counter+=1);
+//     }
+// })();
+// add()
+// add()
+// console.log(add())
+
+// console.log(Object.prototype.__proto__)
+
+
+
+
+
+
+
+
+// //TODO step1: 创建ajax对象
+// var xhr = new XMLHttpRequest();
+// //TODO step2: 设置请求参数
+// xhr.open('get','01.php',true);
+// //TODO step3: 设置回调
+// xhr.onreadystatechange = function () {
+//     //接收返回数据
+//     console.log(xhr.responseText);//responseText 用于接收后台响应的文本
+// }
+// //TODO step4: 发送请求
+// xhr.send()
+
+// //TODO step1: 创建ajax对象
+// var xhr = new XMLHttpRequest();
+// //TODO step2: 设置请求参数
+// xhr.open('get','01.html',true);
+// //TODO step3: 设置回调
+// xhr.onreadystatechange = function () {
+//     //接收返回数据
+//     console.log(xhr.responseText);//responseText 用于接收后台响应的文本
+// }
+// //TODO step4: 发送请求
+// xhr.send()
+
+
+// function ajax(option){
+//     //用户配置option 默认配置init
+//     var init = {
+//         type:'get',
+//         async:true,
+//         url:'',
+//         success: function () { },
+//         error: function () { },
+//         data:{},
+//         beforeSend: function () {
+//             console.log('发送前...');
+//             return false;
+//         }
+//     };
+//     //TODO step1: 合并参数
+//     for(k in option){
+//         init[k] = option[k];
+//     }
+//     //TODO step2: 参数转换
+//     var params = '';
+//     for(k in init.data){
+//         params += '&'+k+'='+init.data[k];
+//     }
+//     var xhr = new XMLHttpRequest();
+//     // type url
+//     //TODO step3: 区分get和post,进行传参
+//     var url = init.url+'?__='+new Date().getTime();
+//     //TODO step4: 发送前
+//     var flag = init.beforeSend();
+//     if(!flag){
+//         return;
+//     }
+//     if(init.type.toLowerCase() == 'get'){
+//         url += params;
+//         xhr.open(init.type,url,init.async);
+//         xhr.send();
+//     }else{
+//         xhr.open(init.type,url,init.async);
+//       xhr.setRequestHeader('content-type','application/x-www-form-urlencoded');
+//         xhr.send(params.substr(1));
+//     }
+//     xhr.onreadystatechange = function () {
+//         if(xhr.readyState == 4){
+//             if(xhr.status == 200){
+//                 init.success(xhr.responseText);
+//             }else{
+//                 //error
+//                 init.error();
+//             }
+//         }
+//     }
+// }
+
+// ajax({
+//     url: 'test.json',
+//     data:{test:123,age:456},
+//     //type:'post',
+//     success: function (res) {
+//         console.log(res);
+//     }
+// });
+
+
+
+</script>
+
+<head>
+    <meta charset="UTF-8">
+   
+   
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+
+
+
+
+

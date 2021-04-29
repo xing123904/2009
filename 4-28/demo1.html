@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+//      tmp = 'abc'; // ReferenceError
+//     console.log(tmp); //
+//     let tmp; // TDZ结束
+//   console.log(tmp); // undefined
+
+//   tmp = 123;
+//   console.log(tmp); // 123
+
+// typeof x; // ReferenceError
+// let x;
+
+// {{{{
+//   {let insane = 'Hello World'}
+//   console.log(insane); // 报错
+// }}}};
+
+// function f() { console.log('I am outside!'); }
+// (function () {
+//   var f = undefined;
+//   if (false) {
+//     function f() { console.log('I am inside!'); }
+//   }
+
+//   f();
+// }());
+// Uncaught TypeError: f is not a function
+
+// if (true)
+//   function f() {}
+
+// // if (false) {
+// //   function f() {}
+// // }
+
+
+// 'use strict';
+// if (true) {
+//   function f() {}
+// }
+
+// // 报错
+// 'use strict';
+// if (true)
+//   function f() {}
+
+// let q= [a,b,c]=[0,1,2];
+// console.log(q)
+
+// let [foo,[[bar],baz]]=[1,[[2],]];
+// console.log(foo,bar,baz)
+
+// let [, ,third]=["foo","bar","baz"];
+// console.log(third)
+
+// let [x, ,y]=[1,2,3];
+// console.log(x,y)
+
+// let [qq,...www]=[1,2,3,4];
+// console.log(www)
+
+// let [x,y,...s]=['a'];
+// console.log(x)
+// console.log(y)
+// console.log(s)
+
+// let [foo]=[];
+
+// let[bar,fff]=[1];
+// console.log(bar,fff);
+
+// let [x, y] = [1, 2, 3];
+// x // 1
+// y // 2
+
+// let [a, [b], c] = [1, [2, 3], 4];
+// // a // 1
+// // b // 2
+// // c // 4
+// console.log(a,b,c)
+
+// let [foo]=false;
+// console.log(foo)
+
+// let [fool]={}
+// console.log(foo)
+
+
+// let [x,y,z]= new Set("a","b","c","d")
+// console.log(x)
+
+// let [x=1,]=[undefined];
+// console.log(x)
+
+// // let [x = 1, y = x] = [];     // x=1; y=1
+// // let [x = 1, y = x] = [2];    // x=2; y=2
+// let [x = 1, y = x] = [1, 2]; // x=1; y=2
+// // let [x = y, y = 1] = []; 
+// console.log(x)
+
+
+
+// let {bbb,aa}={aa:'xx',bbb:'ddd'}
+// console.log(aa,bbb)
+
+
+
+
+
+
+
+
+
+</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let str1 = "abcdefg"
+
+
+  console.log(str1.repeat(3))
+  console.log(str1.padStart(10,"y"))
+  console.log(str1.padEnd(10,"x"))
+
+  console.log(str1.slice(1,4))
+
+  console.log(str1.split("+").join("#"))
+
+
+  console.log(str1.endsWith("dxx"))
+
+  //检测 子串
+  console.log(str1.includes("orxx"))
+
+  console.log(typeof str1)
+  //获取字符串的长度
+  let length = str1.length
+  console.log("length: ",length)
+
+  //访问某个位置
+  console.log(str1[3])
+
+  // 找到给定字符串的位置
+  console.log( str1.indexOf("xx") )
+
+  // charAt 给指定位置，返回字符
+  console.log(str1.charAt(6))
+
+  console.log( str1.concat(" aaa"," bbb"," ccc") )
+
+
+</script>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <button>A</button>
+  <button>B</button>
+  <button>C</button>
+  <button>D</button>
+  <button>E</button>
+
+
+  <script>
+    var o = document.getElementsByTagName("button")
+
+    for(let i=0;i<o.length;i++)
+    {
+      o[i].onclick = function(){
+        alert(i)
+      }
+    }
+
+
+
+    // // 讲一个 HTML集合编程数组
+    // var arr = Array.prototype.slice.call(o)
+    // console.log(arr)
+    //
+    // arr.forEach(function(v,k){
+    //   v.addEventListener("click",function(){
+    //     alert(k)
+    //   })
+    // })
+
+
+
+  </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>const</title>
+</head>
+<body>
+<script>
+
+
+
+  function test()
+  {
+    let a = 123
+  }
+
+  console.log(a)
+</script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象的解构赋值</title>
+</head>
+<body>
+<script>
+
+
+  // let {a,b} = {b:"zhangsan",a:"lisi"}
+  // console.log(a,b)
+
+  let {name:a,sex:b} = {name:"zhangsan",a:"lisi",sex:"男",b:"女"}
+  console.log(a)
+  console.log(b)
+
+
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+  //词法分析
+  let a = 123
+  // 语法分析
+
+  // 生成 AST
+
+  //  编译  解释   将程序代码 翻译成 机器语言
+
+
+
+  for(let i=0;i<10;i++){
+
+  }
+
+  console.log(i)
+
+</script>
+</body>
+</html>

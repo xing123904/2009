@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // 1.获取元素的位置
+    var arr=[11,22,22,55,66,11,66,77,66,]
+    console.log(arr[0,4])
+    console.log(arr[0,6])
+    console.log(arr[0,8])
+
+// 2.计算数字的总和
+    function add(){
+    return arguments[0]+arguments[1]+arguments[2]+arguments[3]+arguments[4]+arguments[5]+arguments[6]+arguments[7]+arguments[8]+arguments[9]
+}
+ console.log(add(11,22,22,55,66,11,88,66,77,66))
+//  3.移除数组中的22的元素
+var arr=[11,22,22,55,66,11,66,77,66,]
+arr.splice(1,2)
+console.log(arr)
+
+// 5. 统计66出现的次数
+var arr=[11,22,22,55,66,11,66,77,66,]
+    var obj={}
+
+
+
+    function $(selector,context){
+    // 如果未传递 context 参数，则默认取 document 值
+    context = context||document;
+
+    if(selector.charAt(0) === "#")//id
+        return context.getElementById(selector.slice(1));
+    if(selector.charAt(0) === ".")//classname
+        //调用byClassName()解决兼容
+        return byClassName(selector.slice(1),context);
+    else
+        return context.getElementsByTagName(selector);
+}
+
+</script>

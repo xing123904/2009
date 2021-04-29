@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // 创建对象的方式
+    // 1.从构造函数new
+    function Person(name,age){
+        this.name=name
+        this.age=age
+    }
+    var p1=new Person('wangwu',18)
+    var p2=new Person("wang",20)
+    console.log(p1)
+    console.log(p2)
+
+    // 对象象字面量
+    var obj1={}
+    var obj2={
+        color:"red",
+        width:"100px"
+    }
+    obj2.hello=function(){
+        alert("hello word")
+    }
+    console.log(obj2)
+    console.log(obj2.color)
+    obj2.hello()
+
+    
+</script>
